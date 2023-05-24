@@ -11,9 +11,9 @@ build/
 remote-repo/
 coverage/
 .module-cache
-fixtures/dom/public/react-dom.js
-fixtures/dom/public/react.js
-test/the-files-to-test.generated.js
+fixtures/dom/public/react-dom.jsx
+fixtures/dom/public/react.jsx
+test/the-files-to-test.generated.jsx
 *.log*
 chrome-user-data
 *.sublime-project
