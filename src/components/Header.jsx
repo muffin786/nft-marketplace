@@ -1,28 +1,44 @@
-import react, { useContext } from "react";
+import react, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useEthers, useEtherBalance } from "@usedapp/core";
+import SearchIcon from './search.svg';
 
 const Header = () => {
 
-    const {activateBrowserWallet, account} = useEthers();
-    const etherBalance = useEtherBalance(account);
+  const [searchValue, setSearchValue] = useState('');
 
-    const handleWallet = () => {
-      activateBrowserWallet();
+  const handleSearchChange = (e) => {
+    setSearchValue(e.target.value);
+  };
 
-    }
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    console.log('Search submitted:', searchValue);
+    setSearchValue('');
+  };
 
     return (
-        <div id="header">
-        <Link to='/' id='logo'>NFT Room</Link>
-
-        <div id="link-containers">
-          <a>Start Hunting</a>
-          <a>Dark NFTs</a>
-          <a>Community</a>
-          <a>Craft NFT</a>
-
-          <button id="connect-wallet" onClick={handleWallet} >{!account ? 'Connect Wallet' : account}</button>
+      <div id="header">
+        <Link to='/' id='logo'>P2E Pro</Link>
+        <div className="nav-middle">
+         <img
+           src={SearchIcon}
+           alt="search"
+           onClick={() => handleSearchSubmit}
+          />
+          <input
+            value={searchValue}
+            onChange={handleSearchChange}
+            placeholder="Collection, Item or user"
+          />
+         
+        </div>
+        <div id="nav-right">
+          <Link to = '/'><a>Home</a></Link>
+          <Link to='/explore'><a>Explore</a></Link>
+          <Link to= '/create'><a>Create</a></Link>
+          <Link to= '/blog'><a>Blog</a></Link>
+          <Link to= '/contact'><a>Contact</a></Link>
+          <button id="connect-wallet">Login!</button>
         </div>
       </div>
     );

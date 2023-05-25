@@ -6,22 +6,22 @@
   width:100%;
   height: 500px;
   /* border: 1px solid cyan; */
-  text-align: center;
+  text-align: left;
   position: relative;
   background-size: cover;
   /* z-index: 1; */
-  margin-top: 13rem;
+  margin-top: 190px;
+  margin-left: 150px;
 }
 
 #hero-background{
-  width: 100%;
-  height:100%;
+  width: 30%;
+  height:60%;
   position: absolute;
   z-index: -1;
-  bottom: 0;
-  left: 0;
+  bottom: 30;
+  left: 30;
   background-size: cover;
-
   /* clip-path: polygon(33% 4%, 63% 0, 86% 5%, 100% 37%, 83% 75%, 51% 81%, 22% 79%, 3% 65%, 6% 33%, 28% 23%); */
 
 }
@@ -37,7 +37,7 @@
   opacity: 0.3;
 }
 #header {
-  height: 77px;
+    height: 55px;
     /* border: 0.001px solid red; */
     display: flex;
     flex-direction: row;
@@ -49,7 +49,7 @@
     z-index: 1;
     right: 0;
     left: 0;
-    background: #100f17;
+    background: #11998e;
 }
 
 #logo {
@@ -65,64 +65,102 @@
 
 
 #connect-wallet {
-  width: 180px;
-  height: 40px;
-  background-color: #ffffff;
+  width: 100px;
+  height: 30px;
+  background-color: #c4edea;
   border: none;
-  border-radius: 50px;
+  border-radius: 5px;
   padding: 10px;
-  margin-left: 30px;
+  margin-left: 20px;
+  align-items: center;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   cursor: pointer;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  color: #605c59;
+}
+#connect-wallet:hover{
+  background-color: #ffffff;
 }
 
 a {
-  margin-left: 30px;
-  padding: 15px;
+  margin-left: 20px;
+  padding: 4px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   border: none;
   cursor: pointer;
-  transition: border 1.5s ease;
+  border-radius: 0.5rem; 
+  font-size: 0.9rem;
 }
 
-#link-containers a:hover {
-  border: 1px solid #ffffff;
+
+.nav-right a {
+  text-decoration: none;
+  color: #333333;
+  margin-left: 4px;
+  
 }
 
-#link-containers a{
-  border: 1px solid #100f17;
-  border-radius: 30px;
+#nav-right a:hover {
+  /* border: 1px solid #ffffff; */
+  color: #c4edea;
 }
 
+.nav-middle {
+  width: 25%;
+ /* margin: 4rem 0 2rem;  */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem 0.3rem;
+  border-radius: 0.5rem; 
+  background: #c4edea;
+  /* -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+  box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527; */
+}
+
+.nav-middle img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+}
+
+.nav-middle input {
+flex: 1;
+border: none;
+font-size: 0.8rem;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+outline: none;
+color: #0f0e0d;
+background: #c4edea;
+}
 
 #header-text-first {
-  margin-top: 90px;
-  font-size: 56px;
+  font-size: 50px;
+  margin-top: 30px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: #ffffff;
-  font-family: "Rock Salt", cursive;
+  Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #fbe81e;
+  font-weight: bold;
+  margin-right: 1000px;
+  
 }
 
 #header-text-second {
-  font-size: 56px;
-
-  color: #ffffff;
-  font-family: "Rock Salt", cursive;
-  margin-top: 30px;
-}
-
-#header-subtext {
+  font-size: 50px;
+  color: #e80975;
+  font-stretch: ultra-expanded;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  padding: 30px;
-  font-size: 18px;
-  color: #666c70;
-  margin-top: 20px;
+  Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-top: 30px;
+  font-weight: bolder;
+  
 }
 
 /*#666C70*/
@@ -131,32 +169,38 @@ a {
   /* border:1px solid red; */
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-top: 80px;
+  align-items: left;
+  justify-content: left;
+  margin-top: 50px;
+  
 }
+ 
+
 
 button#explore {
   width: 180px;
   height: 50px;
   margin-right: 20px;
-  border-radius: 30px;
+  border-radius: 10px;
   font-size:21px;
   border: none;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
-  background: #11998e; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
+  background: #11998e;
+ 
+  /* background: -webkit-linear-gradient(
     to bottom,
     #38ef7d,
     #11998e
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
+  ); */
+   
+  /* background: linear-gradient(
     to bottom,
     #38ef7d,
     #11998e
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  );  */
+ 
   color:#ffffff;
   cursor: pointer;
 }
@@ -165,7 +209,7 @@ button#create {
   width: 180px;
   height: 50px;
   margin-left: 20px;
-  border-radius: 30px;
+  border-radius: 10px;
   font-size:21px;
   border: none;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -237,7 +281,7 @@ button#create {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     margin-top: 20px;
     padding-left: 20px;
     padding-right: 20px;
@@ -248,22 +292,21 @@ button#create {
     width: 180px;
     height: 50px;
     margin-right: 5px;
-    border-radius: 30px;
+    /* border-radius: 10px; */
     border: none;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   
-    background: #11998e; /* fallback for old browsers */
     background: -webkit-linear-gradient(
       to bottom,
       #38ef7d,
       #11998e
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
+    );
+    /* background: linear-gradient(
       to bottom,
       #38ef7d,
       #11998e
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    );  */
   
     font-weight: 600;
     color:#ffffff;
@@ -274,7 +317,7 @@ button#create {
     width: 180px;
     height: 50px;
     margin-left: 5px;
-    border-radius: 30px;
+    /* border-radius: 10px; */
     border: none;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;

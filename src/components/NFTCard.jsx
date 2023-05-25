@@ -6,8 +6,6 @@ import { ColorExtractor } from 'react-color-extractor'
 import Card from "./base/Card";
 import Button from "./base/Button";
 import { Colors } from "../constants/Colors";
-
-import { ModelViewerElement } from "@google/model-viewer";
 import { useARStatus } from "../hooks/isARStatus";
 
 

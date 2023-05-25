@@ -11,6 +11,9 @@ import Explore from "./pages/Explore";
 //dapp
 import { DAppProvider } from "@usedapp/core";
 import NFTDetail from "./pages/NFTDetail";
+import Blog from "./pages/Blog";
+import Contact from "./pages/Contact";
+import Login from "./pages/Login";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -19,6 +22,12 @@ ReactDOM.render(
         <Route path="/create" element={<DAppProvider><Create /></DAppProvider>} />
         <Route path="/explore" element={<DAppProvider config={{}}><Explore /></DAppProvider>} />
         <Route path="/detail" element={<DAppProvider config={{}}><NFTDetail /></DAppProvider>} />
+        <Route path="/blog" element={<DAppProvider config={{}}><Blog /></DAppProvider>} />
+        <Route path="/contact" element={<DAppProvider config={{}}><Contact /></DAppProvider>} />
+        <Route path="/login" element={<DAppProvider config={{}}><Login /></DAppProvider>} />
+        
+
+
 
       </Routes>
     </BrowserRouter>,

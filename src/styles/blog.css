@@ -1,0 +1,41 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+   background-color: beige;
+}
+  
+  h1 {
+    text-align: center;
+    color: aliceblue;
+    margin-bottom: 20px;
+    margin-top: 60px;
+  }
+  
+  .blog-post {
+    margin-bottom: 40px;
+    
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: rgb(6, 80, 86);
+   
+    font-weight: bold;
+  }
+  
+  .author-date {
+    font-size: 14px;
+    color: #888888;
+    margin-bottom: 10px;
+   
+  }
+  
+  p {
+    line-height: 1.5;
+   
+    
+
+  }
+  

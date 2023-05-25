@@ -1,30 +1,68 @@
-import react, { useEffect } from "react";
-import Accordion from "../components/base/Accordion";
-import AccordionHeader from "../components/base/AccordionHeader";
-import Button from "../components/base/Button";
-import Card from "../components/base/Card";
-import Checkbox from "../components/base/Checkbox";
-import Image from "../components/base/Image";
-import Select from "../components/base/Select";
-import TextInput from "../components/base/TextInput";
-import { Colors } from "../constants/Colors";
-import {AiOutlineSearch} from 'react-icons/ai';
-import Header from "../components/Header";
-import { useEthers, useEtherBalance } from "@usedapp/core";
+import React, { useState } from 'react';
+import Header from '../components/Header';
+import "../styles/create.css";
 
-const Create = () => {
-  const {activateBrowserWallet, account} = useEthers();
-  const etherBalance = useEtherBalance(account);
+function CreateNFTPage() {
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  const [image, setImage] = useState(null);
 
-  useEffect(()=>{
-    activateBrowserWallet();
-  },[])
+  const handleTitleChange = (e) => {
+    setTitle(e.target.value);
+  };
+
+  const handleDescriptionChange = (e) => {
+    setDescription(e.target.value);
+  };
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    setImage(file);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Perform NFT creation logic here
+    console.log('NFT Created');
+    console.log('Title:', title);
+    console.log('Description:', description);
+    console.log('Image:', image);
+    // Reset form fields
+    setTitle('');
+    setDescription('');
+    setImage(null);
+  };
 
   return (
-    <>
-      <Header />
-    </>
+    <div className='container'>
+      <Header/>
+      <h1>Create NFT</h1>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Title:
+          <input
+            type="text"
+            value={title}
+            onChange={handleTitleChange}
+            required
+          />
+        </label>
+        <label>
+          Description:
+          <textarea
+            value={description}
+            onChange={handleDescriptionChange}
+            required
+          ></textarea>
+        </label>
+        <label>
+          Image: 
+          <input type="file" accept="image/*" onChange={handleImageChange} required />
+        </label>
+        <button type="submit">Create</button>
+      </form>
+    </div>
   );
-};
+}
 
-export default Create;
+export default CreateNFTPage;

@@ -40,10 +40,6 @@ const NFTDetail = () => {
 
   const isARSupport = useARStatus(state.item.src);
 
-  
-
-  //!! aciklama karakter sayisi sinirlanmali.
-  //!! scroll sorununa cozum bulunmali.
 
   return (
     <div>
@@ -71,7 +67,7 @@ const NFTDetail = () => {
 
                 <div id="detail-controls">
                   <Button
-                    width={isMobile ? "70%" : "70%"}
+                    width="70%"
                     height="50px"
                     child={
                       <div id="button-child">
